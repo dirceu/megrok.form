@@ -1,0 +1,19 @@
+<configure xmlns='http://namespaces.zope.org/zope'
+           xmlns:browser='http://namespaces.zope.org/browser'>
+
+  <view
+      type="zope.publisher.interfaces.browser.IBrowserRequest"
+      for=".interfaces.IHTML"
+      provides="zope.app.form.interfaces.IInputWidget"
+      factory="z3c.widget.tiny.widget.TinyWidget"
+      permission="zope.Public"
+      />
+
+  <browser:page
+      for="grok.interfaces.IGrokForm"
+      name="file"
+      class="collective.namedfile.browser.FileViewDispatcher"
+      permission="zope.Public"
+      />
+
+</configure>
