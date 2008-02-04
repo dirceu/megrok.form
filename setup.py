@@ -4,15 +4,21 @@ version = '0.1'
 
 setup(name='megrok.form',
       version=version,
-      description="",
+      description="Fields, Widgets and Constraints for Grok",
       long_description="""\
 """,
-      # Get strings from http://www.python.org/pypi?%3Aaction=list_classifiers
-      classifiers=[], 
-      keywords="",
+      classifiers=['Development Status :: 3 - Alpha',
+                   'Environment :: Web Environment',
+                   'Intended Audience :: Developers',
+                   'License :: OSI Approved :: Zope Public License',
+                   'Programming Language :: Python',
+                   'Operating System :: OS Independent',
+                   'Topic :: Internet :: WWW/HTTP',
+                   ],
+      keywords="grok form widgets fields constraints",
       author="Dirceu Pereira Tiegs",
       author_email="dirceutiegs@gmail.com",
-      url="",
+      url="http://svn.zope.org/Sandbox/dirceu/megrok.form",
       license="ZPL",
       package_dir={'': 'src'},
       namespace_packages=['megrok'],
@@ -25,7 +31,6 @@ setup(name='megrok.form',
                         'z3c.widget',
                         'zc.datetimewidget',
                         'collective.namedfile',
-                        # Add extra requirements here
                         ],
       entry_points="""
       # Add entry points here
