@@ -12,7 +12,7 @@
   <browser:page
       for="grok.interfaces.IGrokForm"
       name="file"
-      class="collective.namedfile.browser.FileViewDispatcher"
+      class=".browser.FileViewDispatcher"
       permission="zope.Public"
       />
 

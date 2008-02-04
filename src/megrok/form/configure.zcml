@@ -17,6 +17,5 @@
   <include file="overrides.zcml" />
 
   <include package="grok" />
-  <grok:grok package="." />
 
 </configure>
