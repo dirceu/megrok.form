@@ -2,13 +2,15 @@
 megrok.form TODO
 ================
 
-- Release the egg on cheeseshop
+- Get rid of megrok.form.browser.tzinfo
+
+- Add tests for all widgets (input and display)
+
+- Release the egg
 
 - Create a widget for zope.interface.schema.Time (based on z3c.widget.dropdowndatewidget)
 
 - Create / find a field for Reference (take a look at zc.relation, zc.relationship and lovely.relation)
-
-- Test z3c.autoinclude (https://svn.openplans.org/svn/snowsprint/z3c.autoinclude/)
 
 - Look at kupu/formlib integration (http://svn.plone.org/svn/plone/plone.app.form/branches/plip200-kupu-widget)
 

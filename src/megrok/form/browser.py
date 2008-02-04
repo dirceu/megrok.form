@@ -2,9 +2,16 @@ from zope.publisher.interfaces import NotFound
 import mimetypes
 import os.path
 from collective.namedfile.browser import UrlDispatcher
+from zope import interface, component
+from zope.interface.common.idatetime import ITZInfo
+from zope.publisher.interfaces.browser import IBrowserRequest
+import pytz
 
 class FileViewDispatcher(UrlDispatcher):
-    """See collective.namedfile.browser
+    """
+    This overrides collective.namedfile.browser.FileViewDispatcher. The former is
+    almost equal, but uses restrictedTraverse (which is specific to Zope 2 / Plone),
+    I think.
     """
     
     def __call__(self):    
@@ -27,3 +34,13 @@ class FileViewDispatcher(UrlDispatcher):
         self.request.response.setHeader("Content-Type", contenttype)
         self.request.response.setHeader("Content-Length", file.getSize())
         return file.data
+
+
+@interface.implementer(ITZInfo)
+@component.adapter(IBrowserRequest)
+def tzinfo(request):
+    """
+    FIXME: zc.datetimewidget.datetimewidget.DatetimeDisplayWidget needs an adapter
+    for zope.interface.common.idatetime.ITZInfo. This should be set automatically.
+    """
+    return pytz.timezone('Europe/Vienna')

@@ -15,6 +15,7 @@
   <include package="collective.namedfile" />
 
   <include file="overrides.zcml" />
+  <adapter factory=".browser.tzinfo"/>
 
   <include package="grok" />
 
