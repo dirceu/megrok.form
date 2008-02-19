@@ -1,12 +1,15 @@
 from setuptools import setup, find_packages
+from os import sep
+from os.path import curdir
 
 version = '0.1'
+
+long_description = open(sep.join((curdir, 'src','megrok','form','README.txt'))).read()
 
 setup(name='megrok.form',
       version=version,
       description="Fields, Widgets and Constraints for Grok",
-      long_description="""\
-""",
+      long_description=long_description,
       classifiers=['Development Status :: 3 - Alpha',
                    'Environment :: Web Environment',
                    'Intended Audience :: Developers',
