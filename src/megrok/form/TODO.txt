@@ -2,11 +2,11 @@
 megrok.form TODO
 ================
 
-- Get rid of megrok.form.browser.tzinfo
-
-- Add tests for all widgets (input and display)
-
 - Release the egg
+
+- Add input tests for all widgets
+
+- Get rid of megrok.form.browser.tzinfo
 
 - Create a widget for zope.interface.schema.Time (based on z3c.widget.dropdowndatewidget)
 
