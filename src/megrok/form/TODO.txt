@@ -2,8 +2,6 @@
 megrok.form TODO
 ================
 
-- Release the egg
-
 - Add input tests for all widgets
 
 - Get rid of megrok.form.browser.tzinfo

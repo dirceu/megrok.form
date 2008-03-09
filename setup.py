@@ -34,6 +34,7 @@ setup(name='megrok.form',
                         'z3c.widget',
                         'zc.datetimewidget',
                         'collective.namedfile',
+                        'z3c.blobfile',
                         ],
       entry_points="""
       # Add entry points here

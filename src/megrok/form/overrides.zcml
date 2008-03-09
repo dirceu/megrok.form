@@ -16,4 +16,20 @@
       permission="zope.Public"
       />
 
+  <view
+      type="zope.publisher.interfaces.browser.IBrowserRequest"
+	  for=".interfaces.INamedBlobFile"
+	  provides="zope.app.form.interfaces.IInputWidget"
+	  factory=".widgets.NamedBlobFileWidget"
+	  permission="zope.Public"
+	  />
+
+  <view
+      type="zope.publisher.interfaces.browser.IBrowserRequest"
+	  for=".interfaces.INamedBlobImage"
+	  provides="zope.app.form.interfaces.IInputWidget"
+	  factory=".widgets.NamedBlobImageWidget"
+	  permission="zope.Public"
+	  />
+
 </configure>
