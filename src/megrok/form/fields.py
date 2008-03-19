@@ -1,6 +1,8 @@
 from zope import interface, schema
 from collective.namedfile.field import NamedImage as Image
 from collective.namedfile.field import NamedFile as File
+from collective.namedblobfile.field import NamedBlobImage as BlobImage
+from collective.namedblobfile.field import NamedBlobFile as BlobFile
 import constraints
 import interfaces
 
