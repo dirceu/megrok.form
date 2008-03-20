@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 from os import sep
 from os.path import curdir
 
-version = '0.1'
+version = '0.2'
 
 long_description = open(sep.join((curdir, 'src','megrok','form','README.txt'))).read()
 
@@ -21,7 +21,7 @@ setup(name='megrok.form',
       keywords="grok form widgets fields constraints",
       author="Dirceu Pereira Tiegs",
       author_email="dirceutiegs@gmail.com",
-      url="http://svn.zope.org/Sandbox/dirceu/megrok.form",
+      url="http://svn.zope.org/megrok.form",
       license="ZPL",
       package_dir={'': 'src'},
       namespace_packages=['megrok'],
@@ -34,6 +34,7 @@ setup(name='megrok.form',
                         'z3c.widget',
                         'zc.datetimewidget',
                         'collective.namedfile',
+                        'collective.namedblobfile',
                         ],
       entry_points="""
       # Add entry points here

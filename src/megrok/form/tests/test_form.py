@@ -2,7 +2,7 @@ import grok
 from zope import component, interface, schema
 from zope.publisher.browser import TestRequest
 from zope.schema.interfaces import ConstraintNotSatisfied
-from megrok.form.fields import Email, Image, HTML, File
+from megrok.form.fields import Email, Image, HTML, File, BlobFile, BlobImage
 import unittest
 
 class MeGrokFormTest(grok.Application, grok.Container):
@@ -17,17 +17,21 @@ class IPerson(interface.Interface):
     description = HTML(title=u"Description")
     birthday = schema.Date(title=u"Birthday")
     resume = File(title=u"Resume")
+    video = BlobFile(title=u"Favorite Video")
+    wallpaper = BlobImage(title=u"Favorite Wallpaper")
 
 class Person(grok.Model):
     interface.implements(IPerson)
 
-    def __init__(self, name, email, picture, description, birthday, resume):
+    def __init__(self, name, email, picture, description, birthday, resume, video, wallpaper):
         self.name = name
         self.email = email
         self.picture = picture
         self.description = description
         self.birthday = birthday
         self.resume = resume
+        self.video = video
+        self.wallpaper = wallpaper
 
 class AddPerson(grok.AddForm):
     grok.context(MeGrokFormTest)
@@ -73,6 +77,14 @@ class MeGrokFormTests(unittest.TestCase):
         
         # test rendered file widget
         s = """<div class="widget">\n\t<input type="hidden" value="" name="form.resume.used"\n        id="form.resume.used" />\n\t\n\t\n\t<div>\n\t\t<input type="file" maxlength="True" class="" size="30"\n         name="form.resume" id="form.resume" />\n\t\t\n\t</div>\n</div>"""
+        assert(s in rendered_form)
+
+        # test rendered blobfile widget
+        s = """<div class="widget">\n\t<input type="hidden" value="" name="form.video.used"\n        id="form.video.used" />\n\t\n\t\n\t<div>\n\t\t<input type="file" maxlength="True" class="" size="30"\n         name="form.video" id="form.video" />\n\t\t\n\t</div>\n</div>"""
+        assert(s in rendered_form)
+
+        # test rendered blobimage widget
+        s = """<div class="widget">\n\t<input type="hidden" value="" name="form.wallpaper.used"\n        id="form.wallpaper.used" />\n\t\n\t\n\t<div>\n\t\t<input type="file" maxlength="True" class="" size="30"\n         name="form.wallpaper" id="form.wallpaper" />\n\t\t\n\t</div>\n</div>"""
         assert(s in rendered_form)
         
     def test_email_default_constraint(self):

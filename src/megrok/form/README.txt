@@ -11,6 +11,8 @@ Fields
 - HTML, a Text field that uses z3c.widget.tiny
 - File, from collective.namedfile
 - Image, from collective.namedfile
+- BlobFile, from collective.namedblobfile
+- BlobImage, from collective.namedblobfile
 
 Widgets
 -------
