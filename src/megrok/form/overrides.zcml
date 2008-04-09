@@ -9,6 +9,14 @@
       permission="zope.Public"
       />
 
+  <view
+      type="zope.publisher.interfaces.browser.IBrowserRequest"
+      for=".interfaces.IHTML"
+      provides="zope.app.form.interfaces.IDisplayWidget"
+      factory=".widgets.TinyDisplayWidget"
+      permission="zope.Public"
+      />
+
   <browser:page
       for="grok.interfaces.IGrokForm"
       name="file"

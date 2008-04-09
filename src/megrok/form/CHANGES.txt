@@ -1,0 +1,17 @@
+megrok.form changes
+*******************
+
+0.2.1
+====
+* Added display widget for HTML fields.
+
+0.2
+===
+
+* Added BlobFile and BlobImage fields. These fields came from collective.namedblobfile, 
+  which is a blob-compatible version of collective.namedfile.
+
+0.1
+===
+
+ * Initial release.

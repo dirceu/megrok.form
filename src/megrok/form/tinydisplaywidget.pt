@@ -1,0 +1,3 @@
+<tal:widget>
+	<span tal:omit-tag="" tal:content="structure options/value" tal:condition="options/value" />
+</tal:widget>
