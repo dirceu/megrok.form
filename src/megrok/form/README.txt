@@ -63,9 +63,29 @@ current package. It should look something like this::
 Then run bin/buildout again. You should now see buildout saying something like::
 
    Getting distribution for 'megrok.form'.
-   Got megrok.form 0.1.
+   Got megrok.form 0.2.2.
 
 That's all.
+
+Using Blob Storage
+------------------
+
+To use blob storage you need to create a directory under parts/data for storing blobs:
+
+  $ mkdir parts/data/blobs
+
+Then in your parts/zopectl/zope.conf change <zodb> definition like this:
+
+<zodb>
+  <blobstorage>
+    <filestorage>
+      path /path_to_your_app/parts/data/Data.fs
+    </filestorage>
+    blob-dir /path_to_your_app/parts/data/blobs
+  </blobstorage>
+</zodb>
+
+The blob-dir specifies where you want to store blobs.
 
 Authors
 -------

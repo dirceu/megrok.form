@@ -13,6 +13,7 @@
 
   <include package="zope.app.publisher.browser" file="meta.zcml" />
   <include package="collective.namedfile" />
+  <include package="collective.namedblobfile" />
 
   <include file="overrides.zcml" />
   <adapter factory=".browser.tzinfo"/>

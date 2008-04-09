@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 from os import sep
 from os.path import curdir
 
-version = '0.2.1'
+version = '0.2.2'
 
 long_description = open(sep.join((curdir, 'src','megrok','form','README.txt'))).read()
 

@@ -1,8 +1,14 @@
 megrok.form changes
 *******************
 
+0.2.2
+=====
+
+* Bugfix release (allow blob storage)
+
 0.2.1
-====
+=====
+
 * Added display widget for HTML fields.
 
 0.2
