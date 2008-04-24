@@ -24,4 +24,36 @@
       permission="zope.Public"
       />
 
+  <view
+      type="zope.publisher.interfaces.browser.IBrowserRequest"
+      for="zope.schema.interfaces.IDatetime"
+      provides="zope.app.form.interfaces.IInputWidget"
+      factory="zc.datetimewidget.datetimewidget.DatetimeWidget"
+      permission="zope.Public"
+      />
+
+  <view
+      type="zope.publisher.interfaces.browser.IBrowserRequest"
+      for="zope.schema.interfaces.IDate"
+      provides="zope.app.form.interfaces.IInputWidget"
+      factory="zc.datetimewidget.datetimewidget.DateWidget"
+      permission="zope.Public"
+      />
+
+  <view
+      type="zope.publisher.interfaces.browser.IBrowserRequest"
+      for="zope.schema.interfaces.IDatetime"
+      provides="zope.app.form.interfaces.IDisplayWidget"
+      factory="zc.datetimewidget.datetimewidget.DatetimeDisplayWidget"
+      permission="zope.Public"
+      />
+
+  <view
+      type="zope.publisher.interfaces.browser.IBrowserRequest"
+      for="zope.schema.interfaces.IDate"
+      provides="zope.app.form.interfaces.IDisplayWidget"
+      factory="zc.datetimewidget.datetimewidget.DateDisplayWidget"
+      permission="zope.Public"
+      />
+
 </configure>

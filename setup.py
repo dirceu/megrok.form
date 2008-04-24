@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 from os import sep
 from os.path import curdir
 
-version = '0.2.3'
+version = '0.2.4'
 
 long_description = open(sep.join((curdir, 'src','megrok','form','README.txt'))).read()
 
@@ -30,11 +30,11 @@ setup(name='megrok.form',
       zip_safe=False,
       install_requires=['setuptools',
                         'grok',
-                        'zc.resourcelibrary',
-                        'z3c.widget',
-                        'zc.datetimewidget',
-                        'collective.namedfile',
-                        'collective.namedblobfile',
+                        'zc.resourcelibrary == 1.0.1',
+                        'z3c.widget == 0.1.6',
+                        'zc.datetimewidget == 0.5.2',
+                        'collective.namedfile == 1.1',
+                        'collective.namedblobfile == 0.3',
                         ],
       entry_points="""
       # Add entry points here

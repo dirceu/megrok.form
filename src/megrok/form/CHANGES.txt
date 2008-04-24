@@ -1,6 +1,11 @@
 megrok.form changes
 *******************
 
+0.2.4
+=====
+
+* Bugfix release (specifying dependency versions)
+
 0.2.2
 =====
 
