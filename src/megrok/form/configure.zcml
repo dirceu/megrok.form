@@ -8,7 +8,6 @@
 
   <include package="z3c.widget.tiny" />
 
-  <include package="zc.datetimewidget" file="overrides.zcml" />
   <include package="zc.datetimewidget" />
 
   <include package="zope.app.publisher.browser" file="meta.zcml" />
