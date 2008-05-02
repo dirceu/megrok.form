@@ -70,18 +70,13 @@ That's all.
 Using Blob Storage
 ------------------
 
-To use blob storage you need to change zodb definition in your parts/zopectl/zope.conf like this::
+To use blob storage you need to change the data definition in your app's buildout::
 
-      <zodb>
-        <blobstorage>
-          <filestorage>
-            path /path_to_your_app/parts/data/Data.fs
-          </filestorage>
-          blob-dir /path_to_your_app/parts/data/blobs
-        </blobstorage>
-      </zodb>
+   [data]
+   recipe = zc.recipe.filestorage>=1.0.1
+   blob-dir = parts/data/blobs
 
-The blob-dir specifies where you want to store blobs.
+And (re-)run ./bin/buildout. The blob-dir specifies where you want to store blobs.
 
 Authors
 -------
